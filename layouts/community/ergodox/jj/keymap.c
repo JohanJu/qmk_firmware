@@ -8,6 +8,7 @@
 #define GAME 1 // Gameing
 #define CTRL 3 // QWERTY Ctrl
 #define STAR 4
+#define GSYM 5
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -91,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_VOLU, NO_CIRC, NO_EQL,  NO_ASTR, NO_PLUS, NO_QUES, KC_F12,
                 NO_QUO2, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_PSCR,
        KC_VOLD, NO_TILD, NO_AA,   NO_AE,   NO_OSLH, NO_BSLS, KC_SLEP,
-                         KC_NO,KC_NO,KC_NO,KC_NO, KC_NO,
+                         KC_BTN3,KC_NO,KC_NO,KC_NO, KC_NO,
        KC_NO, KC_NO,
        KC_NO,
        KC_NO, KC_BTN2, KC_BTN1
@@ -106,7 +107,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_B,     KC_LCTL,   KC_LALT, KC_LALT,KC_LALT,
                                                      KC_NO, TO(BASE),
                                                               KC_LOCK,
-                                              KC_SPC,MO(SYMB), KC_NO,
+                                              KC_SPC,MO(GSYM), KC_NO,
         // right hand
         KC_NO, KC_6,   KC_7,  KC_8,   KC_9,   KC_0,        KC_NO,
         KC_NO, KC_Y,   KC_U,  KC_I,   KC_O,   KC_P,        KC_NO,
@@ -158,6 +159,27 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TO(BASE),        KC_NO,
         KC_PGUP,
         KC_PGDN,KC_BSPC,KC_ENT
+),
+
+[GSYM] = LAYOUT_ergodox(
+       // left hand
+       KC_NO, KC_F1,   KC_F2, KC_F3,   KC_F4,   KC_F5,   KC_NO,
+       KC_NO, KC_EXLM, KC_P1, KC_P2, KC_P3, KC_NLCK, KC_NO,
+       KC_NO, KC_HASH, KC_P4, KC_P5, KC_P6, NO_AMPR,
+       KC_NO, NO_LESS, KC_P7, KC_P8, KC_P9, NO_PIPE, KC_NO,
+       KC_NO, KC_NO, KC_NO, KC_NO, KC_P0,
+                                           KC_NO, KC_NO,
+                                                    KC_NO,
+                                  KC_NO, KC_NO, KC_NO,
+       // right hand
+       KC_MUTE,   KC_F6, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
+       KC_VOLU, NO_CIRC, NO_EQL,  NO_ASTR, NO_PLUS, NO_QUES, KC_F12,
+                NO_QUO2, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_PSCR,
+       KC_VOLD, NO_TILD, NO_AA,   NO_AE,   NO_OSLH, NO_BSLS, KC_SLEP,
+                         KC_NO,KC_NO,KC_NO,KC_NO, KC_NO,
+       KC_NO, KC_NO,
+       KC_NO,
+       KC_NO, KC_BTN2, KC_BTN1
 ),
 
 };
